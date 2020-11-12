@@ -1,0 +1,97 @@
+
+/* описание блоков с основным контентов */
+/* описание текста на страницу */
+.product__name
+{
+    font-family: 'Orbitron';
+    font-style: normal;
+    color: black;
+    font-size: 30px;
+    margin-left: 3%;
+}
+/* блоки с пеццей */
+.main_content{
+    text-align: center;
+}
+.main_content
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+/* border: 2px solid black; */
+margin: 30px 0px 20px 0px;
+
+}
+
+.block__pizza
+{
+    border: 2px solid black;
+    flex-basis: 350px;
+    margin-bottom: 10px;
+}
+.pizza__name,.pizza__price,.pizza__description
+{
+    margin-top: 10px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Orbitron';
+    font-style: normal;
+
+}
+.pizza__name
+{
+    margin-top: 20px;
+}
+.pizza__price
+{
+    margin-top: 40px;
+}
+.block__content
+{
+background-color: #fff;
+padding: 20px;
+color: #fff;
+height: 400px;
+display: flex;
+flex-direction: column;
+ 
+}
+.pizza__photo img
+{
+    width: 60%;
+}
+.pizza__photo:hover {
+    
+    box-shadow:
+      1px 1px #000000,
+      2px 2px #000000,
+      3px 3px #000000;
+    -webkit-transform: translateX(-7px);
+    transform: translateX(-7px);
+    transition: all 0.3s ease 0s;
+  }
+  
+@media screen and (max-width: 767px) {
+    .block__content
+{
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.pizza__name,.pizza__price,.pizza__description
+{
+    font-size: 14px;
+
+}
+.pizza__name
+{
+    margin-top: 5px;
+}
+.pizza__photo img
+{
+    width: 100%;
+}
+    }
+  /*  */
