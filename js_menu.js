@@ -16,3 +16,20 @@ $(document).ready(function(){
         
     });
 });
+
+function buy__pizza__0()
+{
+    store__display.innerHTML = 0;
+}
+function buy__pizza__1()
+{
+    let ii = parseInt(store__display.innerHTML);
+    ii +=  3.2;
+    store__display.innerHTML =+ ii;
+}
+function buy__pizza__2()
+{
+    let ii = parseInt(store__display.innerHTML);
+    ii +=  4.9;
+    store__display.innerHTML = ii;
+}

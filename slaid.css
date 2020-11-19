@@ -57,6 +57,8 @@
   padding: 8px 12px;
   position: absolute;
   top: 0;
+  font-family: 'Orbitron';
+    font-style: normal;
 }
 
 /* The dots/bullets/indicators */

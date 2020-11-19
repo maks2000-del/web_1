@@ -1,14 +1,66 @@
 /* стили для демонстрации */
-.wrapper
+*
 {
+    box-sizing:border-box;
+}
+/* телеофон */
+.phone__store
+{
+    /* border: 1px solid black; */
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
 
+.phone
+{
+    display: flex;
+    height: 100%;
+    width: 350px;
+    justify-content: flex-start;
+    padding:0 0 0 0px;
+    align-items: center;
+    margin-left: 5px;
+}
+.phone1 img
+{
+    
+}
+.phone1,.phone2,.phone3
+{
+    height: 40px;
+    width: 40px;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-right: 5px;
+    
+}
+.ph1 path
+{
+    fill: black;
+    
+}
+.phone1:hover,.phone2:hover,.phone3:hover
+{
+    background-color: rgb(216, 213, 213);
+}
+.phone__number
+{
+    width: 140px;
+    margin: 10px;
+    margin-left: 40px;
+}
+#phone__num__id
+{
+    text-decoration: none;
 }
 /* основные стили */
 .container
 {
     max-width: 1180px;
     margin: 0px auto;
-    padding: 0px 10px;
+    padding: 0px 20px;
 }
 .header
 {
@@ -29,11 +81,11 @@ z-index: 50;
     background-color: #fff;
     z-index: 2;
     border: 1px solid rgb(0, 0, 0);
+    padding: 0 20px;
 }
 .header__body
 {
  position: relative;
- 
  display: flex;
  justify-content: space-between;
  height: 60px;
@@ -67,6 +119,7 @@ z-index: 50;
  list-style: none;  
  margin: 0px 0px 0px 20px;
 }
+
 .header__link
 {
     color: rgb(0, 0, 0);
@@ -91,6 +144,10 @@ padding: 70px 0px 20px 0px;
 }
 @media (max-width:767px)
 {
+    .phone__store
+    {
+        display: none;
+    }
     body.lock
     {
         overflow: hidden;
@@ -185,31 +242,87 @@ padding: 70px 0px 20px 0px;
     margin: 0px 0px 20px 0px;
     }
 }
+/* корзина */
+.store__block
+{
+    width: 150px;
+    border: 1px solid black;
+    background-color: white;
+    z-index: 50;
+    position: fixed;
+    right: 20px
+}
+.store__display
+{
+    text-align: center;
+    margin: 5px 0px;
+    font-size: 21px;
+    font-weight: 200;
+    font-family: 'Orbitron';
+    font-style: normal; 
+}
 
 /* Footer */
 
-.footer
-{
+footer
+{ 
+    left: 0; bottom: 0;
     width: 100%;
     height: 300px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255), rgba(255, 255, 255, .1)), url('D:/lab/2 курс 1 семестр/курсовая/photos/footer.jpg');
+    background: linear-gradient(to bottom, rgba(255, 255, 255), rgba(255, 255, 255, .1)), url('D:/lab/2 курс 1 семестр/курсовая/photos/footer.jpg') no-repeat;
+    margin: 0 auto;
+    text-align: center;
+    
 }
-.a__footer::after
-{
+
+footer nav a {
+    padding-top: 30px;
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    font-size: 17px;
+    margin-left: 10px;
+    font-family: 'Orbitron';
+    font-style: normal;
+}
+footer nav a:visited {
+    color: black;
+}
+footer nav a:after {
     display: block;
     content: "";
-    background-color: #D34A44;
-    height: 2px;
+    background-color: black;
+    height: 1px;
     width: 0%;
     left: 50%;
     position: absolute;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
     transition: width .3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-     
-.a__footer:hover::after 
-{
+footer nav a:hover:after,
+footer nav a:focus:after {
     width: 100%;
 }
+.social img{
+    margin: 0 10px 0px 10px;
+    width: 40px;
+}
+.social img:hover{
     
+}
+.company
+{
    
+}
+@media (max-width:767px)
+{
+    footer nav a {
+        padding-top: 15px;
+    }
+}

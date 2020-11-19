@@ -20,12 +20,14 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <!-- адаптивность -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
   </head>
   <!-- отображаемое тело страницы -->
   <body>
+    
     <div class='wrapper'>
       <!-- контент -->
-      <script src="js_menu.js"></script>
+      <script src="js/js_menu.js"></script>
     <header class="header">
         <div class = "container">
 <div class="header__body">
@@ -44,13 +46,13 @@
               <a href="#" class="header__link" data-scroll="#anchor_pizza">Pizza</a>
             </li>
             <li>
-              <a href="#" class="header__link">Snacks</a>
+              <a href="#" class="header__link" data-scroll="#anchor_snacks">Snacks</a>
             </li>
             <li>
-              <a href="#" class="header__link">Drinks</a>
+              <a href="#" class="header__link" data-scroll="#anchor_drinks">Drinks</a>
             </li>
             <li>
-              <a href="#" class="header__link">About us</a>
+              <a href="file:///D:/lab/2%20%D0%BA%D1%83%D1%80%D1%81%201%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80/%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F/about.html" class="header__link">About us</a>
             </li>
           </ul>
         </nav>
@@ -59,11 +61,37 @@
   </header>
   <div class="content">
     <div class="container">
-      <div class="content__text">
-        <button class="draw">button</button>
-        зака по телефону
-        корзина
-        ссылки на соц сети
+      <div class="phone__store">
+        <div class="phone">
+          <div class="phone1" onclick="f1()">
+            <img src="photos/mts.svg" width="100%">
+          </div>
+          <div class="phone2" onclick="f2()">
+            <img src="photos/life.svg" width="100%">
+          </div>
+          <div class="phone3" onclick="f3()">
+            <img src="photos/a1.svg" width="100%">
+          </div>
+          <div class="phone__number">
+            <a href="tel:+375333047380" id="phone__num__id">+375333047380</a>
+          </div>
+        </div>
+        <script>
+          function f1() {
+            document.getElementById("phone__num__id").innerHTML = "+375337007070";
+          }
+          function f2() {
+            document.getElementById("phone__num__id").innerHTML = "+37544007070";
+          }
+          function f3() {
+            document.getElementById("phone__num__id").innerHTML = "+375298007070";
+          }
+        </script>
+        <div class="store__block">
+          <p>$ </p>
+          <p class="store__display" id="store__display">0</p>
+          <button onclick="buy__pizza__0()" class="button__del">del</button>
+        </div>
       </div>
     </div>
   </div>
@@ -76,28 +104,22 @@
 
       
         <div class="mySlides fade">
-          <div class="numbertext">1 / 4</div>
+          <div class="numbertext">1 / 3</div>
           <img src="photos/slaid1.png" style="width:100%">
           
         </div>
       
         <div class="mySlides fade">
-          <div class="numbertext">2 / 4</div>
-          <img src="photos/slaid4.png" style="width:100%">
+          <div class="numbertext">2 / 3</div>
+          <img src="photos/slaid2.png" style="width:100%">
           
         </div>
       
         <div class="mySlides fade">
-          <div class="numbertext">3 / 4</div>
-          <img src="photos/slaid2.png" style="width:100%">
+          <div class="numbertext">3 / 3</div>
+          <img src="photos/slaid33.png" style="width:100%">
           
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 4</div>
-            <img src="photos/slaid3.png" style="width:100%">
-           
-          </div>
       
         
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -110,88 +132,188 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
       </div>
-      <script src="js.js"></script>
+      <script src="js/js.js"></script>
      
 <div class="main">
   <span class="product__name"><a id="anchor_pizza"></a>pizza</span>
-<div class="main_content">
+<div class="main_content" id="elem">
   <div class="block__pizza">
     <div class="block__content">
       <div class="pizza__photo">
-        <img src="photos/pizza1.jpg" >
+        <img src="photos/firs page content/pizza1.jpg" >
       </div>
-      <div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Margarita
+        </p>
+          <p class="pizza__description">
+           Italian herbs, tomato sauce, tomatoes, mozzarella
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">3.20<button class="draw button" onclick="buy__pizza__1()">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/pizza2.jpg" alt="photos/logo.png">
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Pepperoni
+        </p>
+          <p class="pizza__description">
+            Tomato sauce, spicy pepperoni, mozzarella
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">4.90<button class="draw button" onclick="buy__pizza__2()">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/pizza3.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Four seasons
+        </p>
+          <p class="pizza__description">
+          Italian herbs, tomato sauce, tomatoes, spicy pepperoni, cheese cubes, mozzarella, ham, mushrooms
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">4.70<button class="draw button">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/pizza4.jpg">
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Ham and mushrooms
+        </p>
+          <p class="pizza__description">  
+          Tomato sauce, mozzarella, ham, mushrooms
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">3.90<button class="draw button">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/pizza5.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          pesto
+        </p>
+          <p class="pizza__description">
+           Beef meatballs, tomato sauce, spicy pepperoni, olives, red onions, bell peppers, mozzarella, ham, mushrooms
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">4.90<button class="draw button">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/pizza6.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Vegetables and mushrooms
+        </p>
+          <p class="pizza__description">
+            Italian herbs, tomato sauce, tomatoes, cheese cubes, olives, red onions, bell peppers, mozzarella, champignons
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">3.60<button class="draw button">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/pizza7.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Ham and cheese
+        </p>
+          <p class="pizza__description">
+            Mozzarella, ham, alfredo sauce
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">2.90<button class="draw button">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/pizza8.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          homemade
+        </p>
+          <p class="pizza__description">
+            Oven potatoes, pickles, chicken, ranch sauce, tomatoes, red onion, dry garlic, mozzarella, tomato sauce
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">4.40<button class="draw button">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/pizza9.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          BBQ chicken
+        </p>
+          <p class="pizza__description">
+            BBQ sauce, tomato sauce, chicken, red onion, mozzarella, bacon
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">3.60<button class="draw button">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/pizza10.jpg" >
+      </div>
+      <div class="pizza__description__block">
         <p class="pizza__name">
           ITALIA
         </p>
           <p class="pizza__description">
-            Bough,
-            signature sauce,
-            cheese,
-            tomato,
-            olives,
-            ham.
+          Italian herbs, tomato sauce, spicy pepperoni, olives, mozzarella, mushrooms
           </p>
-        <p class="pizza__price">
-          1000
-        </p>
         </div>
-    </div>
-  </div>
-<div class="block__pizza">
-  <div class="block__content">
-    2
-  </div>
-</div>
-<div class="block__pizza">
-  <div class="block__content">
-    3
-  </div>
-</div>
-<div class="block__pizza">
-  <div class="block__content">
-    4
-  </div>
-</div>
-
-<div class="block__pizza">
-  <div class="block__content">
-    1
-  </div>
-  </div>
-  <div class="block__pizza">
-    <div class="block__content">
-      2
-    </div>
-  </div>
-  <div class="block__pizza">
-    <div class="block__content">
-      3
-    </div>
-  </div>
-  <div class="block__pizza">
-    <div class="block__content">
-      4
-    </div>
-  </div>
- 
-  <div class="block__pizza">
-    <div class="block__content">
-      1
-    </div>
-    </div>
-    <div class="block__pizza">
-      <div class="block__content">
-        2
       </div>
-    </div>
-    <div class="block__pizza">
-      <div class="block__content">
-        3
+      <p class="pizza__price">3.40<button class="draw button">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/pizza11.jpg" >
       </div>
-    </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Double pepperoni
+        </p>
+          <p class="pizza__description">
+        Tomato sauce, spicy pepperoni, mozzarella
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">5.90<button class="draw button">buy</button></p>
+  </div>
    
 </div>
 
@@ -200,41 +322,67 @@
   <div class="block__pizza">
     <div class="block__content">
       <div class="pizza__photo">
-        <img src="photos/snack1.jpg" >
+        <img src="photos/firs page content/snack1.jpg" >
       </div>
-      <div>
+      <div class="pizza__description__block">
         <p class="pizza__name">
-          ITALIA
+          Potato pancakes, 8 pcs
         </p>
           <p class="pizza__description">
-            Bough,
-            signature sauce,
-            cheese,
-            tomato,
-            olives,
-            ham.
+            Baked potato pancakes, breaded, 8 pcs
           </p>
-        <p class="pizza__price">
-          1000
-        </p>
         </div>
-    </div>
+      </div>
+      <p class="pizza__price">2.90<button class="draw button">buy</button></p>
   </div>
-<div class="block__pizza">
-  <div class="block__content">
-    2
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/snack2.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Pepperoni rolls, 16 pcs
+        </p>
+          <p class="pizza__description">
+            Hot rolls with pepperoni sausages, mozzarella and cheese sauce, 16 pcs
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">3.20<button class="draw button">buy</button></p>
   </div>
-</div>
-<div class="block__pizza">
-  <div class="block__content">
-    3
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/snack3.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Chesee rolls, 16 pcs
+        </p>
+          <p class="pizza__description">
+          Hearty rolls with mozzarella and cheese sauce, 16 pcs
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">2.80<button class="draw button">buy</button></p>
   </div>
-</div>
-<div class="block__pizza">
-  <div class="block__content">
-    4
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/snack4.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Pancakes with ham and cheese, 2 pcs
+        </p>
+          <p class="pizza__description">
+           Puffed pancakes with cheese and pork ham, cooked in the oven
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">2.90<button class="draw button">buy</button></p>
   </div>
-</div>
 
 
 </div>
@@ -245,75 +393,162 @@
   <div class="block__pizza">
     <div class="block__content">
       <div class="pizza__photo">
-        <img src="photos/drink1.jpg" >
+        <img src="photos/firs page content/drink7.jpg" >
       </div>
-      <div>
+      <div class="pizza__description__block">
         <p class="pizza__name">
-          ITALIA
+          Coffee Flat white
         </p>
           <p class="pizza__description">
-            Bough,
-            signature sauce,
-            cheese,
-            tomato,
-            olives,
-            ham.
+            Double espresso with frothed milk, 0.2 l
           </p>
-        <p class="pizza__price">
-          1000
-        </p>
         </div>
-    </div>
-  </div>
-<div class="block__pizza">
-  <div class="block__content">
-    2
-  </div>
-</div>
-<div class="block__pizza">
-  <div class="block__content">
-    3
-  </div>
-</div>
-<div class="block__pizza">
-  <div class="block__content">
-    4
-  </div>
-</div>
-
-<div class="block__pizza">
-  <div class="block__content">
-    1
-  </div>
+      </div>
+      <p class="pizza__price">1.50<button class="draw button">buy</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
-      2
-    </div>
+      <div class="pizza__photo">
+        <img src="photos/firs page content/drink6.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Caramel cappuccino
+        </p>
+          <p class="pizza__description">
+          Espresso with frothed milk and caramel syrup, 0.3 l
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">1.80<button class="draw button">buy</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
-      3
-    </div>
+      <div class="pizza__photo">
+        <img src="photos/firs page content/drink8.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Vanilla cappuccino
+        </p>
+          <p class="pizza__description">
+             Espresso with frothed milk and vanilla syrup, 0.3 L
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">1.80<button class="draw button">buy</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
-      4
-    </div>
-  </div> 
+      <div class="pizza__photo">
+        <img src="photos/firs page content/drink1.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Nut latte
+        </p>
+          <p class="pizza__description">
+            Latte with an increased portion of milk and nut syrup, 0.3 l
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">1.80<button class="draw button">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/drink2.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Morse Cranberry
+        </p>
+          <p class="pizza__description">
+            0,45 l
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">2<button class="draw button">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/drink3.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Morse Black currant
+        </p>
+          <p class="pizza__description">
+            0,45 l
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">2<button class="draw button">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/drink4.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Morse Cherry
+        </p>
+          <p class="pizza__description">
+            0,45 l
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">2<button class="draw button">buy</button></p>
+  </div>
+  <div class="block__pizza">
+    <div class="block__content">
+      <div class="pizza__photo">
+        <img src="photos/firs page content/drink5.jpg" >
+      </div>
+      <div class="pizza__description__block">
+        <p class="pizza__name">
+          Morse Sea buckthorn
+        </p>
+          <p class="pizza__description">
+            0,45 l
+          </p>
+        </div>
+      </div>
+      <p class="pizza__price">2<button class="draw button">buy</button></p>
+  </div>
 
 </div>
 
 </div>
 
 <footer>
-  <div class="footer">
-  <a href="#" class="a__footer" style="color: black;">posithion</a>
-  <!-- <br> -->
-  <a href="#" class="a__footer" style="color: black;">posithion</a>
-  <!-- <br> -->
-  <a href="#" class="a__footer" style="color: black;">posithion</a>
-  </div>
+  <nav>
+          
+              <a href="#">Home</a>
+            
+              <a href="#" data-scroll="#anchor_pizza">Pizza</a>
+            
+              <a href="#" data-scroll="#anchor_snacks">Snacks</a>
+            
+              <a href="#"  data-scroll="#anchor_drinks">Drinks</a>
+            
+              <a href="file:///D:/lab/2%20%D0%BA%D1%83%D1%80%D1%81%201%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80/%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F/about.html" >About us</a>
+           
+        </nav>
+        <div class="logo">
+          <a href="#" alt="">
+            <img class="" src="photos/logo.png" width="150px">
+          </a>
+        </div>
+        <div class="social">
+          <a href="#"><img class="" src="photos/i5.png"></a>
+          <a href="#"><img class="" src="photos/i6.png"></a>
+          <a href="#"><img class="" src="photos/i4.png"></a>
+          <a href="#"><img class="" src="photos/i7.png"></a>
+        </div>
+        <p class="company">@shakalsky_</p>
 </footer>
 </body>
 </html>
