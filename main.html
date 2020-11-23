@@ -16,20 +16,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <!-- подкллюччпение jquery -->
-    
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <!-- адаптивность -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-  </head>
+</head>
   <!-- отображаемое тело страницы -->
   <body>
     
-    <div class='wrapper'>
-      <!-- контент -->
-      <script src="js/js_menu.js"></script>
-    <header class="header">
-        <div class = "container">
+  <div class='wrapper'>
+    <!-- контент -->
+    <script src="js/js_menu.js"></script>
+<header class="header">
+<div class = "container">
 <div class="header__body">
   <a href="#" class="header__logo">
     <img src="photos/logo.png" alt ="">
@@ -60,7 +59,18 @@
     </div>
   </header>
   <div class="content">
+
+    <div class="store__block">
+      <div class="store__price">
+        <p class="store__display" style="margin-right: 5px;">$</p>
+        <p class="store__display" id="store__display">0</p>
+      </div>
+      <button id="myBtn" class="button__store">Store</button>
+      <button onclick="buy__pizza__0()" class="button__del" id="null__store">del</button>
+    </div>
+
     <div class="container">
+
       <div class="phone__store">
         <div class="phone">
           <div class="phone1" onclick="f1()">
@@ -87,17 +97,36 @@
             document.getElementById("phone__num__id").innerHTML = "+375298007070";
           }
         </script>
-        <div class="store__block">
-          <p>$ </p>
-          <p class="store__display" id="store__display">0</p>
-          <button onclick="buy__pizza__0()" class="button__del">del</button>
+
+
+        
+
+        
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <div><p class="page__text">Store</p></div>
+           </div>
+           <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <div class="modal__price__block">
+              <p class="page__text">Order price: $</p>
+              <p id="store__displayy" style="margin-left: 5px;" class="page__text">0</p>
+            </div>
+             <button class="draw button" style="margin: 0 0 20px 0; padding: 3px 20px;"><p style="font-family: 'Orbitron';">checkout</p></button>
+            </div>
+         </div>
+         </div>
+
+
+        <script src="js/js_store.js"></script>
+        <script src="js/js_modal_wind.js"></script>
+       </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+         </div>
+          </div>
 
 
     <div class="slideshow-container">
@@ -125,17 +154,17 @@
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-      <br>
+      
       
     
-      <div style="text-align:center">
+    <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-      <script src="js/js.js"></script>
+    </div>
+    <script src="js/js.js"></script>
      
-<div class="main">
+    <div class="main">
   <span class="product__name"><a id="anchor_pizza"></a>pizza</span>
 <div class="main_content" id="elem">
   <div class="block__pizza">
@@ -152,7 +181,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">3.20<button class="draw button" onclick="buy__pizza__1()">buy</button></p>
+      <p class="pizza__price">3.20<button class="draw button"  id="margarita">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -168,7 +197,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">4.90<button class="draw button" onclick="buy__pizza__2()">buy</button></p>
+      <p class="pizza__price">4.90<button class="draw button" id="pepperoni">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -184,7 +213,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">4.70<button class="draw button">buy</button></p>
+      <p class="pizza__price">4.70<button class="draw button" id="four seasons">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -200,7 +229,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">3.90<button class="draw button">buy</button></p>
+      <p class="pizza__price">3.90<button class="draw button" id="ham and mushrooms">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -216,7 +245,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">4.90<button class="draw button">buy</button></p>
+      <p class="pizza__price">4.90<button class="draw button" id="pesto">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -232,7 +261,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">3.60<button class="draw button">buy</button></p>
+      <p class="pizza__price">3.60<button class="draw button" id="vegetables and mushrooms">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -248,7 +277,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">2.90<button class="draw button">buy</button></p>
+      <p class="pizza__price">2.90<button class="draw button" id="ham and cheese">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -264,7 +293,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">4.40<button class="draw button">buy</button></p>
+      <p class="pizza__price">4.40<button class="draw button" id="homemade">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -280,7 +309,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">3.60<button class="draw button">buy</button></p>
+      <p class="pizza__price">3.60<button class="draw button" id="bbq chicken">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -296,7 +325,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">3.40<button class="draw button">buy</button></p>
+      <p class="pizza__price">3.40<button class="draw button" id="italia">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -312,7 +341,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">5.90<button class="draw button">buy</button></p>
+      <p class="pizza__price">5.90<button class="draw button" id="double pepperoni">add</button></p>
   </div>
    
 </div>
@@ -333,7 +362,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">2.90<button class="draw button">buy</button></p>
+      <p class="pizza__price">2.90<button class="draw button" id="potato pancakes">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -349,7 +378,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">3.20<button class="draw button">buy</button></p>
+      <p class="pizza__price">3.20<button class="draw button" id="pepperoni rolls">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -365,7 +394,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">2.80<button class="draw button">buy</button></p>
+      <p class="pizza__price">2.80<button class="draw button" id="chesee rolls">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -381,7 +410,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">2.90<button class="draw button">buy</button></p>
+      <p class="pizza__price">2.90<button class="draw button" id="pancakes with ham and cheese">add</button></p>
   </div>
 
 
@@ -404,7 +433,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">1.50<button class="draw button">buy</button></p>
+      <p class="pizza__price">1.50<button class="draw button" id="coffee flat white">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -420,7 +449,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">1.80<button class="draw button">buy</button></p>
+      <p class="pizza__price">1.80<button class="draw button" id="caramel cappuccino">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -436,7 +465,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">1.80<button class="draw button">buy</button></p>
+      <p class="pizza__price">1.80<button class="draw button" id="vanilla cappuccino">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -452,7 +481,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">1.80<button class="draw button">buy</button></p>
+      <p class="pizza__price">1.80<button class="draw button" id="nut latte">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -468,7 +497,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">2<button class="draw button">buy</button></p>
+      <p class="pizza__price">2<button class="draw button" id="morse cranberr">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -484,7 +513,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">2<button class="draw button">buy</button></p>
+      <p class="pizza__price">2<button class="draw button" id="morse black currant">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -500,7 +529,7 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">2<button class="draw button">buy</button></p>
+      <p class="pizza__price">2<button class="draw button" id="morse cherry">add</button></p>
   </div>
   <div class="block__pizza">
     <div class="block__content">
@@ -516,12 +545,19 @@
           </p>
         </div>
       </div>
-      <p class="pizza__price">2<button class="draw button">buy</button></p>
+      <p class="pizza__price">2<button class="draw button" id="morse sea buckthorn">add</button></p>
   </div>
 
 </div>
 
-</div>
+    </div>
+
+  
+      
+
+    <div class="popup">
+      Added, enjoy your meal
+    </div>
 
 <footer>
   <nav>
@@ -543,12 +579,13 @@
           </a>
         </div>
         <div class="social">
-          <a href="#"><img class="" src="photos/i5.png"></a>
-          <a href="#"><img class="" src="photos/i6.png"></a>
-          <a href="#"><img class="" src="photos/i4.png"></a>
-          <a href="#"><img class="" src="photos/i7.png"></a>
+          <a href="#" class="icon1"></a>
+          <a href="#" class="icon2"></a>
+          <a href="#" class="icon3"></a>
+          <a href="#" class="icon4"></a>
         </div>
         <p class="company">@shakalsky_</p>
 </footer>
+
 </body>
 </html>

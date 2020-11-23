@@ -9,7 +9,7 @@
     color: black;
     font-size: inherit;
     font-weight: 500;
-  
+    cursor: pointer;
     position: relative;
     vertical-align: middle;
 }
@@ -86,10 +86,17 @@
 
   .button__del
   {
-    width: 50px;
+    width: 60px;
+    height: 25px;
     vertical-align: middle;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);  
-    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  #myBtn {
+    
+    border: none;
+    cursor: pointer;
+    width: 60px;
+    height: 25px;
+    margin: 5px 0 0 12px;
   }

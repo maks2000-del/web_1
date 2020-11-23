@@ -3,6 +3,12 @@ $(document).ready(function(){
         $('.header__burger,.header__menu').toggleClass('active');
         $('body').toggleClass('lock');
     })
+
+    $('.button__store,.close').click(function (event) {
+        $('body').toggleClass('lock');
+        $('.store__block').toggleClass('lock');
+    })
+
     
     $("[data-scroll]").on("click", function (event) {
         event.preventDefault();
@@ -17,19 +23,5 @@ $(document).ready(function(){
     });
 });
 
-function buy__pizza__0()
-{
-    store__display.innerHTML = 0;
-}
-function buy__pizza__1()
-{
-    let ii = parseInt(store__display.innerHTML);
-    ii +=  3.2;
-    store__display.innerHTML =+ ii;
-}
-function buy__pizza__2()
-{
-    let ii = parseInt(store__display.innerHTML);
-    ii +=  4.9;
-    store__display.innerHTML = ii;
-}
+
+    

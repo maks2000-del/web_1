@@ -1,4 +1,23 @@
-/* описание фото галереи */
+/* текс ///////////////////////////////////////////////////////////////////*/
+.text
+{
+    font-size: 21px;
+    font-weight: 200;
+    font-family: 'Orbitron';
+    font-style: normal; 
+    color: black;
+}
+.huge
+{
+    font-size: 40px;
+}
+/* карта //////////////////////////////////////////////////////////////////*/
+.map
+{
+    display:flex;
+    justify-content:flex-end;
+}
+/* описание фото галереи //////////////////////////////////////////////////*/
 .photo__galery
 {
     border: 1px solid black;
@@ -19,7 +38,7 @@
 }
 .container__5
 {
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 .container__4
 {
@@ -32,24 +51,23 @@
     /* min-width: 100%;  */
     height: auto;
     }
- .photo__1, .photo__21, .photo__3, .photo__4, .photo__22
+ .photo__11,.photo__12, .photo__21, .photo__3, .photo__4, .photo__22
 {
     margin: 10px;
     overflow: hidden;
     position: relative;
 } 
-.photo__1
+.photo__11, .photo__12
 {
-
 width: 50%;
 }
 .photo__21
 {
-width: 70%;
+width: 60%;
 }
 .photo__22
 {
-width: 30%;
+width: 40%;
 }
 .photo__3
 {
@@ -57,5 +75,84 @@ width: 33%;
 }
 .photo__4
 {
-width: 85%;
+width: 100%;
 }
+
+@media (max-width:767px)
+{
+    .text
+{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.huge
+{
+    font-size: 25px;
+}
+.container__1
+{
+    align-items: flex-end;
+}
+.container__1, .container__2, .container__4
+{
+    flex-direction: row-reverse;
+}
+.container__2 .animation.active
+{
+    transition-delay: 400ms;
+}
+.container__4 .animation.active
+{
+    transition-delay: 800ms;
+}
+.photo__11,.photo__12, .photo__21, .photo__3, .photo__4, .photo__22
+{
+    margin: 3px 3px 0 3px;
+} 
+.photo__11
+{
+width: 45%;
+}
+.photo__12
+{
+width: 55%;
+}
+.photo__21,
+.photo__22
+{
+width: 50%;
+}
+.photo__3
+{
+display: none;
+}
+.photo__4
+{
+display: none;
+}
+    }
+/* анимация при прокрутке */
+.firstBox1 
+{
+    transform: translate3d(-60px, 0, 0);
+    transition: all .5s ease-out;
+    opacity: 0;
+}
+.animation
+{
+    transform: translate3d(0, 30px, 0);
+    transition: all .5s ease-out;
+    opacity: 0;
+}
+.firstBox2 
+{
+    transform: translate3d(60px, 0, 0);
+    transition: all .5s ease-out;
+    opacity: 0;
+}
+.firstBox1.active, .firstBox2.active, .animation.active
+{
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+

@@ -3,13 +3,20 @@
 {
     box-sizing:border-box;
 }
-/* телеофон */
+.page__text
+{
+    font-size: 21px;
+    font-weight: 200;
+    font-family: 'Orbitron';
+    font-style: normal; 
+}
+/* телеофон /////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////*/
 .phone__store
 {
-    /* border: 1px solid black; */
     height: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .phone
@@ -17,22 +24,17 @@
     display: flex;
     height: 100%;
     width: 350px;
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding:0 0 0 0px;
     align-items: center;
     margin-left: 5px;
 }
-.phone1 img
-{
-    
-}
+
 .phone1,.phone2,.phone3
 {
     height: 40px;
     width: 40px;
-    border-top: 1px solid rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(0, 0, 0);
-    border-radius: 10px;
+    
     margin-right: 5px;
     
 }
@@ -43,24 +45,30 @@
 }
 .phone1:hover,.phone2:hover,.phone3:hover
 {
-    background-color: rgb(216, 213, 213);
+    background-color: rgba(216, 213, 213, 0.36);
+    border-bottom: 2px solid black;
+    border-radius: 10px;
 }
 .phone__number
 {
     width: 140px;
-    margin: 10px;
-    margin-left: 40px;
+    margin: 10px 0 10px 40px;
 }
 #phone__num__id
 {
     text-decoration: none;
 }
-/* основные стили */
+/* основные стили /////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////*/
 .container
 {
     max-width: 1180px;
     margin: 0px auto;
     padding: 0px 20px;
+}
+.content .container
+{
+    padding: 0px;
 }
 .header
 {
@@ -127,7 +135,10 @@ z-index: 50;
     font-size: 18px;
     text-decoration: none;
 }
-
+.header__link:hover
+{
+    color: rgb(74, 74, 74);
+}
 .content
 {
 padding: 70px 0px 20px 0px;
@@ -142,16 +153,17 @@ padding: 70px 0px 20px 0px;
 {
     margin: 0px 0px 20px 0px;
 }
+body.lock
+    {
+        overflow: hidden;
+    }
 @media (max-width:767px)
 {
     .phone__store
     {
         display: none;
     }
-    body.lock
-    {
-        overflow: hidden;
-    }
+    
     .content
     {
         padding: 65px 0px 0px 0px;
@@ -242,27 +254,199 @@ padding: 70px 0px 20px 0px;
     margin: 0px 0px 20px 0px;
     }
 }
-/* корзина */
+/* корзина ///////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////*/
+
 .store__block
 {
     width: 150px;
+    height: 70px;
     border: 1px solid black;
     background-color: white;
     z-index: 50;
     position: fixed;
-    right: 20px
+    right: 30px;
+    bottom: 60px;
+}
+.store__block.lock
+{
+    display: none;
+}
+.store__price
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .store__display
 {
     text-align: center;
-    margin: 5px 0px;
     font-size: 21px;
     font-weight: 200;
     font-family: 'Orbitron';
     font-style: normal; 
 }
+/* модальное окно корзины ///////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////*/
+body {font-family: Arial, Helvetica, sans-serif;}
 
-/* Footer */
+
+.modal__price__block
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+    position: relative;
+    background-color: #ffffff;
+
+    margin: auto;
+    padding: 0;
+    padding-left: 0.8px;
+    border: 2px solid #000000;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.close {
+    color: rgb(115, 115, 115);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    color: black;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.modal-body {    
+    padding: 2px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    color: black;
+    text-align: right;
+}
+.modal__store__block
+{
+    position: relative;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.modal__store__block::after
+{
+    display: block;
+    content: "";
+    background-color: rgba(230, 230, 230, 0.728);
+    width: 90%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+
+}
+.modal__store__block:last-child::after
+{
+    background-color: rgb(0, 0, 0);
+    width: 90%;
+    left: 0;
+}
+/* Объекты в окне///////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////*/
+.modal__store__photo
+{
+    width: 15%;
+    flex-basis: 80px;
+    max-width: 80px;
+}
+.modal__store__text
+{
+    width: 55%;
+    margin: 20px;
+    vertical-align: middle;   
+}
+@media (max-width:1100px)
+{
+.modal__store__text
+{
+    margin: 0 5% 0 10%;
+}
+   }
+.modal__store__price
+{
+    width: 20%;
+    padding-right: 5%;
+    vertical-align: middle;
+}
+/* модальное окно при заказе */
+.popup {
+    display: none;
+}
+.popup {
+    position: fixed;
+    width: 300px;
+    height: 50px;
+    bottom: 30px;
+    left: 50px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.653);
+    color: white;
+    border-radius: 10px;
+    z-index: 10;
+}
+/* Footer ///////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////*/
 
 footer
 { 
@@ -309,20 +493,77 @@ footer nav a:hover:after,
 footer nav a:focus:after {
     width: 100%;
 }
-.social img{
-    margin: 0 10px 0px 10px;
-    width: 40px;
-}
-.social img:hover{
-    
-}
-.company
+.social
 {
-   
+    display: flex;
+    justify-content: center;
 }
+.icon1, .icon2, .icon3, .icon4
+{
+    display: block  ;
+    margin: 0 7px;
+    height: 48px;   
+    width: 48px;
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 200ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+a.icon1
+{
+    background: url('D:/lab/2 курс 1 семестр/курсовая/photos/ii1.png')no-repeat;
+}
+a.icon1:hover
+{
+    background: url('D:/lab/2 курс 1 семестр/курсовая/photos/i2.png')no-repeat;
+}
+a.icon2
+{
+    background: url('D:/lab/2 курс 1 семестр/курсовая/photos/ii2.png')no-repeat;
+}
+a.icon2:hover
+{
+    background: url('D:/lab/2 курс 1 семестр/курсовая/photos/i1.png')no-repeat;
+}
+a.icon3
+{
+    background: url('D:/lab/2 курс 1 семестр/курсовая/photos/ii3.png')no-repeat;
+}
+a.icon3:hover
+{
+    background: url('D:/lab/2 курс 1 семестр/курсовая/photos/i3.png')no-repeat;
+}
+a.icon4
+{
+    background: url('D:/lab/2 курс 1 семестр/курсовая/photos/ii4.png')no-repeat;
+}
+a.icon4:hover
+{
+    background: url('D:/lab/2 курс 1 семестр/курсовая/photos/i4.png')no-repeat;
+}
+  
 @media (max-width:767px)
 {
     footer nav a {
         padding-top: 15px;
     }
+}
+
+/* скролбар */
+
+/* Размеры скроллбара */
+::-webkit-scrollbar {
+    width: 11px;
+}
+
+/* Трек поле скроллбара */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    background: rgb(243, 243, 243);
+}
+
+/* Ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0); 
+    background: rgb(57, 57, 57);
 }
