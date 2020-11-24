@@ -1,10 +1,40 @@
 
-
 function buy__pizza__0()
 {
     store__display.innerHTML = 0;
     store__displayy.innerHTML = 0;
 }
+
+var image1 = new Image(); 
+image1.src = "photos/field.png";
+image1.className = "store__field__button";
+document.body.appendChild(image1);
+var image2 = new Image(); 
+image2.src = "photos/clear.png";
+image2.className = "store__clear__button";
+document.body.appendChild(image2);
+var image3 = new Image(); 
+image3.src = "photos/buy.png";
+image3.className = "store__buy__button";
+document.body.appendChild(image3);
+    
+$(image1).on("click", function() { // функция, которая должна работать при клике, и работает 
+ 
+});
+$(image2).on("click", function() { // функция, которая должна работать при клике, и работает 
+  store__display.innerHTML = 0;
+  store__displayy.innerHTML = 0;
+  $('.modal__store__block').detach();
+});
+$(image3).on("click", function() { // функция, которая должна работать при клике, и работает 
+  // alert("buy");
+  modal.style.display = "block";
+});
+$(image3).click(function (event) {
+  $('body').toggleClass('lock');
+  $('.store__block, .store__buy__button, .store__clear__button, .store__field__button').toggleClass('lock');
+})
+
 
 let store = [
     {id: 0, name: "null__store", price: 0, photo:""},

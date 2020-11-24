@@ -4,9 +4,9 @@ $(document).ready(function(){
         $('body').toggleClass('lock');
     })
 
-    $('.button__store,.close').click(function (event) {
+    $('.close').click(function (event) {
         $('body').toggleClass('lock');
-        $('.store__block').toggleClass('lock');
+        $('.store__block, .store__buy__button, .store__clear__button, .store__field__button').toggleClass('lock');
     })
 
     
