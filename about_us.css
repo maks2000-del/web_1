@@ -89,6 +89,14 @@ width: 100%;
 {
     font-size: 25px;
 }
+.content
+{
+    padding: 55px 0px 0px 0px;
+}
+.textlalala
+{
+    display: none;
+}
 .container__1
 {
     align-items: flex-end;

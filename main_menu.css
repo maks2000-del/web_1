@@ -10,6 +10,13 @@
     font-family: 'Orbitron';
     font-style: normal; 
 }
+@media (max-width:767px)
+{
+p
+{
+    font-size: 20%;
+}
+}
 /* телеофон /////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////*/
 .phone__store
@@ -132,7 +139,7 @@ z-index: 50;
 {
     color: rgb(0, 0, 0);
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 1.2em;
     text-decoration: none;
 }
 .header__link:hover
@@ -166,12 +173,16 @@ body.lock
     
     .content
     {
-        padding: 65px 0px 0px 0px;
+        padding: 110px 0px 0px 0px;
     }
     .header__body
     {
         height: 50px;
     }
+    .header__link
+{
+    font-size: 1.4em;
+}
     .header__logo
 {
     flex: 0 0 50px;
@@ -280,10 +291,25 @@ body.lock
 .store__display
 {
     text-align: center;
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 200;
     font-family: 'Orbitron';
     font-style: normal; 
+}
+@media (max-width:767px)
+{
+.store__block
+{
+    width: 25%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    right: 3%;
+    top: 60px;
+}
+.store__display
+{
+    margin: 10px 0; 
+}
 }
 /* модальное окно корзины ///////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////*/
@@ -444,6 +470,19 @@ body {font-family: Arial, Helvetica, sans-serif;}
     border-radius: 10px;
     z-index: 10;
 }
+@media (max-width:767px)
+{
+
+.popup 
+{
+    position: fixed;
+    width: 60%;
+    height: 40px;
+    bottom: 2%;
+    left: 5%;
+    font-size: 15px;
+}
+}
 /* Footer ///////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////*/
 
@@ -547,6 +586,7 @@ a.icon4:hover
     footer nav a {
         padding-top: 15px;
     }
+   
 }
 
 /* скролбар */
@@ -612,4 +652,12 @@ a.icon4:hover
 .store__field__button.lock
 {
     display: none;
+}
+@media (max-width:767px)
+{
+.store__clear__button, .store__buy__button, .store__field__button
+{
+    display: none;
+}
+
 }

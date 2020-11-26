@@ -18,18 +18,16 @@ image3.src = "photos/buy.png";
 image3.className = "store__buy__button";
 document.body.appendChild(image3);
     
-$(image1).on("click", function() { // функция, которая должна работать при клике, и работает 
- 
-});
-$(image2).on("click", function() { // функция, которая должна работать при клике, и работает 
+$(image2).on("click", function() { 
   store__display.innerHTML = 0;
   store__displayy.innerHTML = 0;
   $('.modal__store__block').detach();
 });
-$(image3).on("click", function() { // функция, которая должна работать при клике, и работает 
-  // alert("buy");
+
+$(image3).on("click", function() { 
   modal.style.display = "block";
 });
+
 $(image3).click(function (event) {
   $('body').toggleClass('lock');
   $('.store__block, .store__buy__button, .store__clear__button, .store__field__button').toggleClass('lock');

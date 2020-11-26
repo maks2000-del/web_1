@@ -47,14 +47,6 @@
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-.pizza__price
-{
-    margin-bottom: 10px;
-    position: relative;
-    bottom: 10px;
-    margin-top: 0px;
-   
-}
 .block__content
 {
     background-color: #fff;
@@ -64,8 +56,32 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    height: 90%;
+    height: 85%;
 }
+
+.pizza__price__block
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 15%;
+}
+.pizza__price
+{
+    width: 50%;
+}
+.add__button
+{
+    width: 50%;
+}
+@media (max-width:767px)
+{
+    .pizza__price__block
+    {
+        margin-bottom: 20px;
+    }
+}
+
 .pizza__photo img
 {
     width: 60%;
@@ -96,12 +112,11 @@
 
 .pizza__name,.pizza__price,.pizza__description
 {
-    font-size: 14px;
+    font-size: 1em;
 }
 .pizza__price
 {
-    margin-left:14%;
-    margin-top: 0px;
+   margin: 0;
 }
 .pizza__name
 {
