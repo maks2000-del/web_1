@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     $('.close').click(function (event) {
         $('body').toggleClass('lock');
-        $('.store__block, .store__buy__button, .store__clear__button, .store__field__button').toggleClass('lock');
+        $('.store__block, .store__buy__button, .store__clear__button, .store__field__button, .button__del, .button__store').toggleClass('lock');
     })
 
     

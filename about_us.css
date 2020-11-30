@@ -12,10 +12,69 @@
     font-size: 40px;
 }
 /* карта //////////////////////////////////////////////////////////////////*/
+.map__block
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
 .map
 {
-    display:flex;
-    justify-content:flex-end;
+    display: flex;
+    /* width: 60%; */
+    position: relative;
+    right: 1px;
+}
+.map__adress
+{
+    padding: 20px;
+    width: 400px;
+}
+.map__adress ul
+{
+    padding-right: 40px;
+    list-style-image: url('D:/lab/2 курс 1 семестр/курсовая/photos/i.png');
+}
+.map__adress ul li
+{
+    margin: 0 15px;
+    padding-bottom: 25px;
+    
+}
+
+.map__adress ul li a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    font-family: 'Orbitron';
+}
+.map__adress ul li a:visited
+{
+    
+    color: black;
+}
+@media (max-width:767px)
+{
+.map__block
+{
+
+    flex-direction: column;
+}
+.map
+{
+    width: 100%;  
+    justify-content: center; 
+}
+.map__adress ul
+{
+    padding: 0 10px;
+}
+.map__adress
+{
+    width: 100%;
+}
 }
 /* описание фото галереи //////////////////////////////////////////////////*/
 .photo__galery

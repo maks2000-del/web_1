@@ -13,7 +13,7 @@ span.onclick = function() {
 window.onclick = function(event) {
     if (event.target == modal) {
         $('body').toggleClass('lock');
-        $('.store__block, .store__buy__button, .store__clear__button, .store__field__button').toggleClass('lock');
+        $('.store__block, .store__buy__button, .store__clear__button, .store__field__button, .button__del, .button__store').toggleClass('lock');
         modal.style.display = "none";
     }
 }

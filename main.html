@@ -65,8 +65,7 @@
         <p class="store__display" style="margin-right: 5px;">$</p>
         <p class="store__display" id="store__display">0</p>
       </div>
-      <button id="myBtn" class="button__store">Store</button>
-      <!-- <button onclick="buy__pizza__0()" class="button__del" id="null__store">del</button> -->
+      
     </div>
            
     <div class="container">
@@ -97,32 +96,7 @@
             document.getElementById("phone__num__id").innerHTML = "+375298007070";
           }
         </script>
-
-
         
-
-        
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <div class="modal-header">
-              <span class="close">&times;</span>
-              <div><p class="page__text">Store</p></div>
-           </div>
-           <div class="modal-body">
-            </div>
-            <div class="modal-footer">
-              <div class="modal__price__block">
-              <p class="page__text">Order price: $</p>
-              <p id="store__displayy" style="margin-left: 5px;" class="page__text">0</p>
-            </div>
-             <button class="draw button" style="margin: 0 0 20px 0; padding: 3px 20px;"><p style="font-family: 'Orbitron';">checkout</p></button>
-            </div>
-         </div>
-         </div>
-
-
-        <script src="js/js_store.js"></script>
-        <script src="js/js_modal_wind.js"></script>
        </div>
         </div>
          </div>
@@ -719,7 +693,28 @@
     <div class="popup">
       Added, enjoy your meal
     </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <div><p class="page__text">Store</p></div>
+       </div>
+       <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <div class="modal__price__block">
+          <p class="page__text">Order price: $</p>
+          <p id="store__displayy" style="margin-left: 5px;" class="page__text">0</p>
+        </div>
+         <button class="check__out__button">checkout</button>
+        </div>
+     </div>
+     </div>
+     <button id="myBtn" class="button__store">Store</button>
+     <button onclick="buy__pizza__0()" class="button__del" id="null__store">&times;</button>
 
+    <script src="js/js_store.js"></script>
+    <script src="js/js_modal_wind.js"></script>
 <footer>
   <nav>
           

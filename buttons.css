@@ -72,27 +72,111 @@
       height 0.25s ease-out 0.75s; 
   }
 
-  @media (max-width:767px)
-  {
-  .button
-  {
-     
-  }
-  }
-
   .button__del
   {
-    width: 60px;
+    position: fixed;
+    top:110px;
+    right: 3%;
+    width: 8.5%;
     height: 25px;
     vertical-align: middle;
     border: none;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.639);
+    color: white;
   }
-  #myBtn {
-    
+  .button__store {
     border: none;
+    border-right: 1px solid black;
+    position: fixed;
+    top:110px;
+    right: 11.5%;
     cursor: pointer;
-    width: 60px;
+    width: 16.5%;
     height: 25px;
-    margin: 5px 0 0 12px;
+    color: black;
+    background-color: white;
   }
+  .button__store, .button__del
+{
+  display: none;
+}
+.button__store.lock, .button__del.lock
+{
+  display: none;
+}
+
+
+  .store__buy__button
+{
+    position: fixed;
+    right: 90px;
+    bottom: 90px;
+    z-index: 10;
+    transition: all 0.3s ease 0s;
+}
+.store__buy__button:hover
+{
+    -webkit-transform: translate(-7px, -7px);
+    transform: translate(-7px, -7px);
+    cursor: pointer;
+}
+.store__clear__button
+{
+    position: fixed;
+    right: 30px;
+    bottom: 90px;
+    z-index: 10;
+    transition: all 0.3s ease 0s;
+}
+.store__clear__button:hover
+{
+    -webkit-transform: translate(4px, -4px);
+    transform: translate(4px, -4px);
+    cursor: pointer;
+}
+.store__field__button
+{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 10;
+}
+.store__buy__button.lock
+{
+    display: none;
+}
+.store__clear__button.lock
+{
+    display: none;
+}
+.store__field__button.lock
+{
+    display: none;
+}
+.check__out__button
+{
+  height: 30px;
+  margin: 0 0 20px 0; 
+  padding: 3px 20px;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Orbitron';
+  border-radius: 3px;
+  border: 1px solid black;
+}
+.check__out__button:hover
+{
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+@media (max-width:767px)
+{
+.store__clear__button, .store__buy__button, .store__field__button
+{
+    display: none;
+}
+.button__store, .button__del
+{
+  display: block;
+}
+}
