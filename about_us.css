@@ -28,8 +28,13 @@
 }
 .map__adress
 {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     width: 400px;
+    
+}
+.adress__list
+{
+    border-left: 1px solid black;
 }
 .map__adress ul
 {
@@ -42,6 +47,11 @@
     padding-bottom: 25px;
     
 }
+.map__adress ul li:last-child
+{
+    padding-bottom: 0px;
+    
+}
 
 .map__adress ul li a
 {
@@ -49,6 +59,7 @@
     color: black;
     font-size: 1em;
     font-family: 'Orbitron';
+    padding-left: 6px;
 }
 .map__adress ul li a:visited
 {
@@ -71,9 +82,14 @@
 {
     padding: 0 10px;
 }
+.adress__list
+{
+    border-left: 0px;
+}
 .map__adress
 {
     width: 100%;
+    padding-left: 0px;
 }
 }
 /* описание фото галереи //////////////////////////////////////////////////*/
@@ -152,10 +168,7 @@ width: 100%;
 {
     padding: 55px 0px 0px 0px;
 }
-.textlalala
-{
-    display: none;
-}
+
 .container__1
 {
     align-items: flex-end;

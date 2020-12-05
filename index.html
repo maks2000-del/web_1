@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <!-- кодировка страницы -->
+  <meta charset="UTF-8">
+  <!-- заголовок страницы в браузере -->
+  <title>B&W Pizza</title>
+  <!-- иконка страницы в браузере -->
+  <link rel="shortcut icon" href="photos/ico.ico" type="image/x-icon">
+  <!-- css -->
+  <link rel="stylesheet" href="css/slaid.css">
+  <link rel="stylesheet" href="css/pizza.css">
+  <link rel="stylesheet" href="css/main_menu.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <!-- шриФТЫ -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+  <!-- подкллюччпение jquery -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <!-- адаптивность -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<!-- отображаемое тело страницы -->
+
+<body>
+
+  <div class='wrapper'>
+    <!-- контент -->
+    <script src="js/js_menu.js"></script>
+    <header class="header">
+      <div class="container">
+        <div class="header__body">
+          <a href="#" class="header__logo">
+            <img src="photos/logo.png" alt="">
+          </a>
+          <div class="header__burger">
+            <span></span>
+          </div>
+          <nav class="header__menu">
+            <ul class="header__list">
+              <li>
+                <a href="#" class="header__link">Home</a>
+              </li>
+              <li>
+                <a href="#" class="header__link" data-scroll="#anchor_pizza">Pizza</a>
+              </li>
+              <li>
+                <a href="#" class="header__link" data-scroll="#anchor_snacks">Snacks</a>
+              </li>
+              <li>
+                <a href="#" class="header__link" data-scroll="#anchor_drinks">Drinks</a>
+              </li>
+              <li>
+                <a href="file:///D:/lab/2%20%D0%BA%D1%83%D1%80%D1%81%201%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80/%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F/about.html"
+                  class="header__link">About us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <div class="store__block">
+        <div class="store__price">
+          <p class="store__display" style="margin-right: 5px;">$</p>
+          <p class="store__display" id="store__display">0</p>
+        </div>
+
+      </div>
+
+      <div class="container">
+
+        <div class="phone__store">
+          <div class="phone">
+            <div class="phone1" onclick="f1()">
+              <img src="photos/mts.svg" width="100%">
+            </div>
+            <div class="phone2" onclick="f2()">
+              <img src="photos/life.svg" width="100%">
+            </div>
+            <div class="phone3" onclick="f3()">
+              <img src="photos/a1.svg" width="100%">
+            </div>
+            <div class="phone__number">
+              <a href="tel:+375333047380" id="phone__num__id">+375333047380</a>
+            </div>
+          </div>
+          <script>
+            function f1() {
+              document.getElementById("phone__num__id").innerHTML = "+375337007070";
+            }
+
+            function f2() {
+              document.getElementById("phone__num__id").innerHTML = "+37544007070";
+            }
+
+            function f3() {
+              document.getElementById("phone__num__id").innerHTML = "+375298007070";
+            }
+          </script>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="slideshow-container">
+
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="photos/slaid1.png" style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="photos/slaid2.png" style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="photos/slaid33.png" style="width:100%">
+
+    </div>
+
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <script src="js/js.js"></script>
+
+  <div class="main">
+    <span class="product__name"><a id="anchor_pizza"></a>pizza</span>
+    <div class="main_content" id="elem">
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/pizza1.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Margarita
+            </p>
+            <p class="pizza__description">
+              Italian herbs, tomato sauce, tomatoes, mozzarella
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            3.20
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="margarita">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/pizza2.jpg" alt="photos/logo.png">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Pepperoni
+            </p>
+            <p class="pizza__description">
+              Tomato sauce, spicy pepperoni, mozzarella
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            4.90
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="pepperoni">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/pizza3.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Four seasons
+            </p>
+            <p class="pizza__description">
+              Italian herbs, tomato sauce, tomatoes, spicy pepperoni, cheese cubes, mozzarella, ham, mushrooms
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            4.70
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="four seasons">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/pizza4.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Ham and mushrooms
+            </p>
+            <p class="pizza__description">
+              Tomato sauce, mozzarella, ham, mushrooms
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            3.90
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="ham and mushrooms">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/pizza5.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              pesto
+            </p>
+            <p class="pizza__description">
+              Beef meatballs, tomato sauce, spicy pepperoni, olives, red onions, bell peppers, mozzarella, ham,
+              mushrooms
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            4.90
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="pesto">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/pizza6.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Vegetables and mushrooms
+            </p>
+            <p class="pizza__description">
+              Italian herbs, tomato sauce, tomatoes, cheese cubes, olives, red onions, bell peppers, mozzarella,
+              champignons
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            3.60
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="vegetables and mushrooms">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/pizza7.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Ham and cheese
+            </p>
+            <p class="pizza__description">
+              Mozzarella, ham, alfredo sauce
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            2.90
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="ham and cheese">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/pizza8.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              homemade
+            </p>
+            <p class="pizza__description">
+              Oven potatoes, pickles, chicken, ranch sauce, tomatoes, red onion, dry garlic, mozzarella, tomato sauce
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            4.40
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="homemade">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/pizza9.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              BBQ chicken
+            </p>
+            <p class="pizza__description">
+              BBQ sauce, tomato sauce, chicken, red onion, mozzarella, bacon
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            3.60
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="bbq chicken">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/pizza10.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              ITALIA
+            </p>
+            <p class="pizza__description">
+              Italian herbs, tomato sauce, spicy pepperoni, olives, mozzarella, mushrooms
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            3.40
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="italia">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/pizza11.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Double pepperoni
+            </p>
+            <p class="pizza__description">
+              Tomato sauce, spicy pepperoni, mozzarella
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            5.90
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="double pepperoni">add</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <span class="product__name"><a id="anchor_snacks"></a>snacks</span>
+    <div class="main_content">
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/snack1.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Potato pancakes, 8 pcs
+            </p>
+            <p class="pizza__description">
+              Baked potato pancakes, breaded, 8 pcs
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            2.90
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="potato pancakes">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/snack2.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Pepperoni rolls, 16 pcs
+            </p>
+            <p class="pizza__description">
+              Hot rolls with pepperoni sausages, mozzarella and cheese sauce, 16 pcs
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            3.20
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="pepperoni rolls">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/snack3.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Chesee rolls, 16 pcs
+            </p>
+            <p class="pizza__description">
+              Hearty rolls with mozzarella and cheese sauce, 16 pcs
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            2.80
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="chesee rolls">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/snack4.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Pancakes with ham and cheese, 2 pcs
+            </p>
+            <p class="pizza__description">
+              Puffed pancakes with cheese and pork ham, cooked in the oven
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            2.90
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="pancakes with ham and cheese">add</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <span class="product__name"><a id="anchor_drinks"></a>drinks</span>
+    <div class="main_content">
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/drink7.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Coffee Flat white
+            </p>
+            <p class="pizza__description">
+              Double espresso with frothed milk, 0.2 l
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            1.50
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="coffee flat white">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/drink6.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Caramel cappuccino
+            </p>
+            <p class="pizza__description">
+              Espresso with frothed milk and caramel syrup, 0.3 l
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            1.80
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="caramel cappuccino">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/drink8.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Vanilla cappuccino
+            </p>
+            <p class="pizza__description">
+              Espresso with frothed milk and vanilla syrup, 0.3 L
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            1.80
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="vanilla cappuccino">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/drink1.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Nut latte
+            </p>
+            <p class="pizza__description">
+              Latte with an increased portion of milk and nut syrup, 0.3 l
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            1.80
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="nut latte">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/drink2.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Morse Cranberry
+            </p>
+            <p class="pizza__description">
+              0,45 l
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            2
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="morse cranberr">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/drink3.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Morse Black currant
+            </p>
+            <p class="pizza__description">
+              0,45 l
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            2
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="morse black currant">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/drink4.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Morse Cherry
+            </p>
+            <p class="pizza__description">
+              0,45 l
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            2
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="morse cherry">add</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pizza">
+        <div class="block__content">
+          <div class="pizza__photo">
+            <img src="photos/firs page content/drink5.jpg">
+          </div>
+          <div class="pizza__description__block">
+            <p class="pizza__name">
+              Morse Sea buckthorn
+            </p>
+            <p class="pizza__description">
+              0,45 l
+            </p>
+          </div>
+        </div>
+        <div class="pizza__price__block">
+          <div class="pizza__price">
+            2
+          </div>
+          <div class="add__button">
+            <button class="draw button" id="morse sea buckthorn">add</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <div class="popup">
+    Added, enjoy your meal
+  </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <div>
+          <p class="page__text">Store</p>
+        </div>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <div class="modal__price__block">
+          <p class="page__text">Order price: $</p>
+          <p id="store__displayy" style="margin-left: 5px;" class="page__text">0</p>
+        </div>
+        <button class="check__out__button">checkout</button>
+      </div>
+    </div>
+  </div>
+  <button id="myBtn" class="button__store">Store</button>
+  <button onclick="buy__pizza__0()" class="button__del" id="null__store">&times;</button>
+
+  <script src="js/js_store.js"></script>
+  <script src="js/js_modal_wind.js"></script>
+  <footer>
+    <nav>
+
+      <a href="#">Home</a>
+
+      <a href="#" data-scroll="#anchor_pizza">Pizza</a>
+
+      <a href="#" data-scroll="#anchor_snacks">Snacks</a>
+
+      <a href="#" data-scroll="#anchor_drinks">Drinks</a>
+
+      <a
+        href="file:///D:/lab/2%20%D0%BA%D1%83%D1%80%D1%81%201%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80/%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F/about.html">About
+        us</a>
+
+    </nav>
+
+    <div class="logo">
+      <a href="#" alt="">
+        <img class="" src="photos/logo.png" width="150px">
+      </a>
+    </div>
+    <div class="social">
+      <a href="#" class="icon1"></a>
+      <a href="#" class="icon2"></a>
+      <a href="#" class="icon3"></a>
+      <a href="#" class="icon4"></a>
+    </div>
+    <br>
+    <XML ID="dsoBook">
+      <?xml version="1.0"?>
+      <BOOK>
+        @shakalsky_ 2020
+      </BOOK>
+    </XML>
+  </footer>
+
+</body>
+
+</html>

@@ -10,6 +10,7 @@
     cursor: pointer;
     position: relative;
     vertical-align: middle;
+    font-family: 'Orbitron';
 }
 
     .button::before,
@@ -84,6 +85,7 @@
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.639);
     color: white;
+    
   }
   .button__store {
     border: none;
@@ -96,6 +98,8 @@
     height: 25px;
     color: black;
     background-color: white;
+    border: 1px solid black;
+    border-top: none;
   }
   .button__store, .button__del
 {

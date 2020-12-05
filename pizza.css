@@ -36,9 +36,14 @@
 .pizza__name,.pizza__price,.pizza__description
 {
     color: black;
-    font-size: 20px;
+    font-size: 1em;
     font-family: 'Orbitron';
     font-style: normal;
+}
+.pizza__name,.pizza__price
+{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 .pizza__name
 {
